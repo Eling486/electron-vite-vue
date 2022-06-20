@@ -17,3 +17,26 @@ yarn icons
 ```bash
 yarn electron:build
 ```
+
+## File Tree
+```
+electron-vite-vue
+├─src
+│  ├─main
+│  │  ├─modules
+│  │  └─index.js
+│  ├─preload
+│  └─renderer
+│      ├─assets
+│      │  ├─css
+│      │  └─images
+│      ├─components/
+│      ├─pages/
+│      ├─router/
+│      └─store/
+├─.gitignore
+├─index.html
+├─package.json
+├─README.md
+└─vite.config.js
+```
