@@ -23,9 +23,10 @@ yarn electron:build
 electron-vite-vue
 ├─src
 │  ├─main
-│  │  ├─modules
+│  │  ├─modules/
 │  │  └─index.js
 │  ├─preload
+│  │  └─preload.js
 │  └─renderer
 │      ├─assets
 │      │  ├─css
