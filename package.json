@@ -1,0 +1,68 @@
+{
+  "name": "electron-vite-vue",
+  "private": true,
+  "version": "1.0.0",
+  "main": "src/main/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "electron": "wait-on tcp:3000 && cross-env IS_DEV=true electron .",
+    "electron:dev": "concurrently -k \"cross-env BROWSER=none yarn dev\" \"yarn electron\"",
+    "electron:builder": "electron-builder",
+    "build:for:electron": "cross-env ELECTRON=true vite build",
+    "electron:build": "yarn build:for:electron && yarn electron:builder",
+    "icons": "electron-icon-builder --input=./src/renderer/assets/images/logo.png --output=build --flatten"
+  },
+  "author": "Eling",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eling486/electron-vite-vue.git"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "sass": "^1.52.3",
+    "scss": "^0.2.4",
+    "vue": "^3.2.25",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "concurrently": "^7.2.1",
+    "cross-env": "^7.0.3",
+    "electron": "^19.0.4",
+    "electron-builder": "^23.0.3",
+    "electron-icon-builder": "^2.0.1",
+    "vite": "^2.9.9",
+    "vue-router": "^4.0.15",
+    "wait-on": "^6.0.1"
+  },
+  "build": {
+    "appId": "com.example.app",
+    "productName": "Example",
+    "copyright": "Copyright © 2022 ${author}",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "build/icons/icon.icns"
+    },
+    "win": {
+      "icon": "build/icons/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "asar": true,
+    "files": [
+      "core/**/*",
+      "src/main/**/*",
+      "src/preload/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "core/assets",
+      "output": "dist"
+    }
+  }
+}
