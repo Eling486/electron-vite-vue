@@ -22,19 +22,19 @@ yarn electron:build
 ```
 electron-vite-vue
 ├─src
-│  ├─main
-│  │  ├─modules/
-│  │  └─index.js
-│  ├─preload
-│  │  └─preload.js
-│  └─renderer
-│     ├─assets
-│     │  ├─css
-│     │  └─images
-│     ├─components/
-│     ├─pages/
-│     ├─router/
-│     └─store/
+│ ├─main
+│ │ ├─modules/
+│ │ └─index.js
+│ ├─preload
+│ │ └─preload.js
+│ └─renderer
+│   ├─assets
+│   │ ├─css
+│   │ └─images
+│   ├─components/
+│   ├─pages/
+│   ├─router/
+│   └─store/
 ├─.gitignore
 ├─index.html
 ├─package.json
