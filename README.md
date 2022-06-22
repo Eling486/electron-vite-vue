@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/Eling486/electron-vite-vue/main/src/renderer/assets/images/logo-text.png">
+<img src="./src/renderer/assets/images/logo-text.png">
 
 ## Quick Start
 ```bash
