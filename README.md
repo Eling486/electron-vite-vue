@@ -1,4 +1,4 @@
-# Electron + Vite + Vue3
+![Electron + Vite + Vue3](https://raw.githubusercontent.com/Eling486/electron-vite-vue/main/src/renderer/assets/images/logo-text.png#pic_center =400x)
 
 ## Quick Start
 ```bash
